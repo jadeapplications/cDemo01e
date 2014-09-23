@@ -1,0 +1,56 @@
+// Copyright (c) 2014 Mimetics Inc.
+// All Rights Reserved
+//
+// THIS SOFTWARE IS PROVIDED BY MIMETICS "AS IS" WITHOUT ANY EXPRESSED OR 
+// IMPLIED WARRANTIES.  IN NO CASE SHALL MIMETICS OR ANY CONTRIBUTORS BE
+// LIABLE IN ANY DAMAGES CAUSED BY THE USE OF THIS SOFTWARE.  
+//
+// FileName: cDemo01e.script
+// Version : 01.0
+//
+// Author  : myke predko
+//
+// Description: Demonstrate how to make the Jade Robot Move
+//
+// Release History:
+//  cDemo01c - Start the Jade Robot Moving Forwards at full Speed using the "motorset" command and String Values
+//           - Delay for 1s, Time for Robot Moving
+//           - Stop the Jade Robot
+//           - Delay for 1s
+//           - Repeat previous steps using "motorset" command and Integer Values Converted into Strings
+//           - Repeat previous steps using "motorleftset" & "motorrightset" commands and Strings
+//           - Repeat previous steps using "motorleftset" & "motorrightset" commands with Integers into Strings
+
+
+    syscall(motorset, "100:100");  //  Left Motor = Right Motor = 100 = Full Forwards
+
+    syscall(delay, itos(1000));    
+
+    syscall(motorset, "0:0");      
+
+    syscall(delay, itos(1000));    //  Delay for 1,000ms = 1s
+
+
+    syscall(motorset, itos(100) + ":" + itos(100));  //  Left Motor = Right Motor = 100 = Full Forwards
+                                   //  "itos" built in funtion converts Integers into Strings
+    syscall(delay, itos(1000));    
+
+    syscall(motorset, itos(0) + ":" + itos(0));      
+
+    syscall(delay, itos(1000));    
+
+
+    syscall(motorleftset, "100");  syscall(motorrightset, "100");  //  Motors can be accessed seperately
+
+    syscall(delay, itos(1000));    
+
+    syscall(motorleftset, "0");    syscall(motorrightset, "0");      
+
+    syscall(delay, itos(1000));    
+
+
+    syscall(motorleftset, itos(100));  syscall(motorrightset, itos(100));  //  Converting Integers into Strings
+
+    syscall(delay, itos(1000));    
+
+    syscall(motorleftset, itos(0));    syscall(motorrightset, itos(0));
