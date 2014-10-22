@@ -11,9 +11,9 @@ Demonstrate Moving the Jade Robot Moving Forwards with Different "motorset" sysc
 ### Project Information
 ```
 Type              : C
-Version           : 01.0
+Version           : 1.0
 Author            : myke predko
-Firmware          : 40
+Firmware          : 42
 ```
 
 
